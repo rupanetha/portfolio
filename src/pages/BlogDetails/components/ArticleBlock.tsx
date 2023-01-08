@@ -6,6 +6,7 @@ import { format } from 'date-fns';
 import { useBlogDetailsPageStore } from '../utils/store';
 import { fetchOneBlog } from '../../../services/blog.service';
 import { pulseAnimation } from '../../../components/Loading/constants';
+import { Helmet } from 'react-helmet';
 
 export default function ArticleBlock() {
   const { slug } = useParams();
@@ -78,6 +79,19 @@ export default function ArticleBlock() {
 
   return (
     <Box w='100%' display='flex' flexDir={'column'} bgColor='whitesmoke'>
+      <Helmet>
+        <meta name='description' content={blog.attributes.short_description} />
+        <meta
+          name='og:description'
+          content={blog.attributes.short_description}
+        />
+        <meta
+          property='og:image'
+          content={`https://api.saikiran.codes/rupanetha${blog.attributes.cover_image.data.attributes.url}`}
+        />
+        <meta name='twitter:card' content='summary_large_image' />
+        <title>Rupa Netha | {blog.attributes.title}</title>
+      </Helmet>
       {blog && (
         <Box w={'100%'}>
           <chakra.img

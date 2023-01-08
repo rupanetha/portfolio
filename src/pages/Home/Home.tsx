@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet';
+
 import { Footer } from '../../components/Footer';
 import Layout from '../../components/Layout';
 import AboutBlock from './components/AboutBlock';
@@ -10,6 +12,16 @@ import WorkBlock from './components/WorkBlock';
 function HomePage() {
   return (
     <Layout>
+      <Helmet>
+        <meta name='description' content='A personal Portfolio and Blog' />
+        <meta name='og:description' content='A personal Portfolio and Blog' />
+        <meta
+          property='og:image'
+          content='https://api.saikiran.codes/rupanetha/uploads/site_screen_517a289a92.png'
+        />
+        <meta name='twitter:card' content='summary_large_image' />
+        <title>Rupa Netha | Portfolio - Home</title>
+      </Helmet>
       <CoverBlock />
       <AboutBlock />
       <BlockSeperator title='MY EXPERTISE' />
