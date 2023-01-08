@@ -27,6 +27,18 @@
   line-height: 28px;
   letter-spacing: 0.4px;
 }
+.ck-content li {
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.4px;
+  margin-bottom: 8px;
+}
+.ck-content li:last-child {
+  margin-bottom: 0px;
+}
+.ck-content ul {
+  margin: 0 32px;
+}
 
 .ck-content h1 {
   font-size: 32px;
