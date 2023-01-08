@@ -14,7 +14,7 @@ function HomePage() {
       <AboutBlock />
       <BlockSeperator title='MY EXPERTISE' />
       <ExpertisesBlock />
-      <BlockSeperator title='MY WORK' />
+      <BlockSeperator title='MY DESIGNS' />
       <WorkBlock />
       <BlockSeperator title='LATEST ARTICLES' />
       <FeaturedArticlesBlock />

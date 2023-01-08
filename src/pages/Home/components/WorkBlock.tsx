@@ -25,7 +25,8 @@ export default function WorkBlock() {
         attributes: {
           ...media.attributes,
           images: media.attributes.images.data.map(
-            (image: any) => `https://api.saikiran.codes/rupanetha${image.attributes.url}`
+            (image: any) =>
+              `https://api.saikiran.codes/rupanetha${image.attributes.url}`
           ),
         },
       }));
@@ -68,7 +69,7 @@ export default function WorkBlock() {
       px={{ base: '36px', md: 'unset' }}
     >
       {workMedia && (
-        <Box ref={carouselRef} maxW='1280px' margin='0 auto'>
+        <Box ref={carouselRef} maxW='1280px' w='50%' margin='0 auto'>
           <Carousel
             arrows={false}
             dotsNavigation={false}
