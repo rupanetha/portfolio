@@ -87,7 +87,7 @@ export default function ArticleBlock() {
         />
         <meta
           property='og:image'
-          content={`https://api.saikiran.codes/rupanetha${blog.attributes.cover_image.data.attributes.url}`}
+          content={`https://api.saikiran.codes/rupanetha${blog.attributes.thumbnail_image?.data.attributes.url}`}
         />
         <meta name='twitter:card' content='summary_large_image' />
         <title>Rupa Netha | {blog.attributes.title}</title>

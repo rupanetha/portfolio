@@ -6,7 +6,7 @@ export async function fetchAllBlogs() {
 
 export async function fetchOneBlog(slug: any) {
   return fetch(
-    `${API_URL}/blogs?filters[slug][$eq]=${slug}&populate[0]=cover_image&populate[1]=author.profile_pic&populate[2]=blog_category`
+    `${API_URL}/blogs?filters[slug][$eq]=${slug}&populate[0]=cover_image&populate[1]=author.profile_pic&populate[2]=blog_category&populate[3]=thumbnail_image`
   ).then((data) => data.json());
 }
 
