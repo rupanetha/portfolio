@@ -69,7 +69,12 @@ export default function WorkBlock() {
       px={{ base: '36px', md: 'unset' }}
     >
       {workMedia && (
-        <Box ref={carouselRef} maxW='1280px' w='50%' margin='0 auto'>
+        <Box
+          ref={carouselRef}
+          maxW={{ base: '100%', md: '1280px' }}
+          w={{ base: '100%', md: '50%' }}
+          margin='0 auto'
+        >
           <Carousel
             arrows={false}
             dotsNavigation={false}
