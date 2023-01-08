@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import App from './App';
 import './ck-content.css';
+import ScrollToTop from './utils/scrollToTop';
 
 const theme = extendTheme({
   fonts: {
@@ -19,7 +20,9 @@ ReactDOM.render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
       <BrowserRouter>
-        <App />
+        <ScrollToTop>
+          <App />
+        </ScrollToTop>
       </BrowserRouter>
     </ChakraProvider>
   </React.StrictMode>,

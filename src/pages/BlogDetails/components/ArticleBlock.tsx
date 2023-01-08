@@ -5,6 +5,7 @@ import { format } from 'date-fns';
 
 import { useBlogDetailsPageStore } from '../utils/store';
 import { fetchOneBlog } from '../../../services/blog.service';
+import { pulseAnimation } from '../../../components/Loading/constants';
 
 export default function ArticleBlock() {
   const { slug } = useParams();
@@ -28,12 +29,59 @@ export default function ArticleBlock() {
     }
   }
 
+  if (loading) {
+    return (
+      <Box w='100%' display='flex' flexDir={'column'} bgColor='whitesmoke'>
+        <Box w={'100%'}>
+          <Box borderRadius='6px' bgColor='whitesmoke' width='100%'>
+            <Box
+              w='100%'
+              display={'flex'}
+              flexDir='column'
+              animation={pulseAnimation}
+            >
+              <Box bgColor={'#ccc'} height='450px' />
+            </Box>
+          </Box>
+        </Box>
+        <Box
+          bgColor='white'
+          display='flex'
+          maxW={{ base: '95%', md: '760px' }}
+          margin='0 auto'
+          minH={'800px'}
+          transform='translateY(-120px)'
+          borderRadius={'12px'}
+          p={{ base: '3', md: '6' }}
+          flexDir={'column'}
+          w='100%'
+        >
+          <Box
+            borderRadius='6px'
+            //   overflow='hidden'
+            bgColor='whitesmoke'
+            width='100%'
+          >
+            <Box
+              w='100%'
+              display={'flex'}
+              flexDir='column'
+              animation={pulseAnimation}
+            >
+              <Box bgColor={'#ccc'} height='100vh' />
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+    );
+  }
+
   return (
     <Box w='100%' display='flex' flexDir={'column'} bgColor='whitesmoke'>
       {blog && (
         <Box w={'100%'}>
           <chakra.img
-            // objectFit={'cover'}
+            objectFit={{ base: 'cover', md: 'unset' }}
             height='450px'
             width='100%'
             src={`https://api.saikiran.codes/rupanetha${blog.attributes.cover_image.data.attributes.url}`}
