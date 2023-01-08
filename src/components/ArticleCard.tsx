@@ -24,7 +24,7 @@ export default function ArticleCard({ item }: any) {
           height='300px'
           w='100%'
           objectFit='cover'
-          src={`https://api.saikiran.codes/rupanetha/${fields.cover_image.data.attributes.url}`}
+          src={`https://api.saikiran.codes/rupanetha/${fields.thumbnail_image.data?.attributes.url}`}
         />
       </Box>
       <Box p='4'>

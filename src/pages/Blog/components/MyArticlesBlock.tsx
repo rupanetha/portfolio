@@ -85,7 +85,7 @@ export default function MyArticlesBlock() {
           pos='relative'
           w='-webkit-fit-content'
         >
-          <Text fontSize={'14px'} fontWeight='600' color='#5e5e5e'>
+          <Text letterSpacing={'2px'} fontSize={'16px'} fontWeight='600' color='#5e5e5e'>
             BLOG
           </Text>
           <Box
@@ -125,7 +125,7 @@ export default function MyArticlesBlock() {
           flexDir={{ base: 'column', md: 'row' }}
           gap='8'
         >
-          {loading && [0, 1, 2].map(() => <ArticleCardLoader />)}
+          {loading && !filteredArticles && [0, 1, 2].map(() => <ArticleCardLoader />)}
           {filteredArticles &&
             filteredArticles.map((item: any) => <ArticleCard item={item} />)}
         </Box>

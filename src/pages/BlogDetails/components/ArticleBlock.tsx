@@ -33,7 +33,7 @@ export default function ArticleBlock() {
       {blog && (
         <Box w={'100%'}>
           <chakra.img
-            objectFit={'cover'}
+            // objectFit={'cover'}
             height='450px'
             width='100%'
             src={`https://api.saikiran.codes/rupanetha${blog.attributes.cover_image.data.attributes.url}`}
