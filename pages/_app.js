@@ -13,13 +13,12 @@ const theme = extendTheme({
 export default function App({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
-      {/* <DefaultSeo
+      <DefaultSeo
         title='Rupa Netha | Portfolio'
         description='A personal Portfolio and Blog'
         openGraph={{
           type: 'website',
           locale: 'en_IE',
-          url: 'https://rupanetha.com/',
           siteName: 'Rupa Netha | Portfolio',
           images: [
             {
@@ -35,7 +34,7 @@ export default function App({ Component, pageProps }) {
           site: '@rupanetha.com',
           cardType: 'summary_large_image',
         }}
-      /> */}
+      />
       <Component {...pageProps} />
     </ChakraProvider>
   );

@@ -57,7 +57,7 @@ export default function BlogPage(props) {
           url: `${host}/blog/${props.blog.attributes.slug}`,
           images: [
             {
-              url: `https://api.saikiran.codes/rupanetha/${props.blog.attributes.thumbnail_image.data?.attributes.url}`,
+              url: `https://api.saikiran.codes/rupanetha${props.blog.attributes.thumbnail_image.data?.attributes.url}`,
               width: 850,
               height: 650,
               alt: 'Thumbnail Image',
