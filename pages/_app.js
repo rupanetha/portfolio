@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import { DefaultSeo } from 'next-seo';
 
@@ -10,7 +11,21 @@ const theme = extendTheme({
   },
 });
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps, router }) {
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      window.gtag('config', 'G-N7VNEXPS05', {
+        page_path: url,
+      });
+    };
+
+    // Subscribe to the change event
+    router.events.on('routeChangeComplete', handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
   return (
     <ChakraProvider theme={theme}>
       <DefaultSeo
