@@ -7,7 +7,7 @@ import { Button } from '../Global';
 
 export default function ContactForm() {
   const [state, handleSubmit] = useForm('mqkjrnlz');
-  const [showFormState, setShowFormState] = React.useState('success');
+  const [showFormState, setShowFormState] = React.useState('idle');
 
   React.useEffect(() => {
     if (state.succeeded) {
