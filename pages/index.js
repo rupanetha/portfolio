@@ -33,9 +33,9 @@ export const getStaticProps = async (context) => {
       },
     }));
     let { data: featuredArticles } = await fetchAllBlogs();
-    featuredArticles = featuredArticles.filter(
-      (blog) => blog.attributes.featured
-    );
+    featuredArticles = featuredArticles
+      .filter((blog) => blog.attributes.featured)
+      .slice(0, 3);
 
     result.props.aboutMeData = aboutMeData[0];
     result.props.expData = expData;
