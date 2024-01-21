@@ -1,10 +1,10 @@
 {
-  "commit": "5188912b358044a7de79dcac9c511e0ca2509878",
-  "generated": "2024-01-21T13:23:34.378Z",
+  "commit": "281ddc0d11aa081826afe21d112cb7d97debb845",
+  "generated": "Sun, 21 Jan 2024 15:33:04 GMT",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "5188912b358044a7de79dcac9c511e0ca2509878",
+        "commit": "c351c8b64084c237e21fc46a1494040afbe6cfe3",
         "hash": "3937039393",
         "path": "outstatic/content/portfolio/trip-planning-features.md"
       },
