@@ -1,0 +1,24 @@
+{
+  "commit": "5188912b358044a7de79dcac9c511e0ca2509878",
+  "generated": "2024-01-21T13:23:34.378Z",
+  "metadata": [
+    {
+      "__outstatic": {
+        "commit": "5188912b358044a7de79dcac9c511e0ca2509878",
+        "hash": "3937039393",
+        "path": "outstatic/content/portfolio/trip-planning-features.md"
+      },
+      "author": {
+        "name": "Sai Kranthi",
+        "picture": "https://avatars.githubusercontent.com/u/57343520?v=4"
+      },
+      "collection": "portfolio",
+      "coverImage": "https://uploads-ssl.webflow.com/610d429092065e92baeb7965/62a5b279b9f968f170557274_homepage-grid-travel-app-p-1600.jpeg",
+      "description": "Helping travelers plan their dream trip to Japan.",
+      "publishedAt": "2024-01-21T00:56:40.294Z",
+      "slug": "trip-planning-features",
+      "status": "published",
+      "title": "Trip Planning Features"
+    }
+  ]
+}
